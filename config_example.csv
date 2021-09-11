@@ -1,0 +1,8 @@
+STATE,TRANSITION_LOGIC,NEXT_STATE
+A,in == 4'b2,B
+,in == 10'b4,C
+,,A
+B,in == 3,C
+,in == 10'b4,D
+C,in == 5,D
+D,,E
