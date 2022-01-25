@@ -86,7 +86,8 @@ for each_state in state_dict:
             output_file.write(f'\t\t\t\t\tnext_state = {each_transition[next_state]};\n')
             counter += 1
         output_file.write('\t\t\t\tend\n')
-    output_file.write('\t\t\tend\n')
+    if len(state_dict[each_state]) > 1:
+        output_file.write('\t\t\tend\n')
 output_file.write('\t\tendcase\n')
 output_file.write('\tend\n\n')
 
